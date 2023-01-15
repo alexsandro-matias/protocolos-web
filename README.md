@@ -45,6 +45,26 @@ Os request servem para enviar requisições e a grande maioria são o método ge
 Métodos seguros – método que tando executado não alteram o resultado do servidor, ou seja, apenas modo de leitura – idempotentes – sempre o mesmo resultado – get ou post ou option – 
 Um métodos seguro podem causa
 
+Exemplo:
+1. Get:/somedir/page.html/HTTP/1.1 (Request Line) (Head Line)
+2. Host: www.someschool.edu (Head Line)
+3. Connection:close (Head Line)
+4. User-agent: Mozilla/5.0 (Head Line)
+5. Accept-language:fr (Head Line).
+
+Detalhando essas etapas:
+
+1. Request Line com o método ``Get`` solicitando uma página específica com a versão 1.1 do protocolo.
+2. Host da aplicação, se estivesse sendo executada na máquina seria localhost ou endereço padrão para localhost.
+3. Connection close significando não persistente.
+4. User-agent é o agente que está realizando a requisição, ou seja, a tecnologia aplicada por ela. Nela poderia um por curl, navegador ou aplicação Java.
+5.  Accept-language é o idioma de preferência do cliente.
+
+
+
+
+
+
 
 
 
