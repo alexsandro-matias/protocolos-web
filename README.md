@@ -42,8 +42,6 @@ response
 Estrutura – request line – método + 
 Os request servem para enviar requisições e a grande maioria são o método get 
 
-Métodos seguros – método que tando executado não alteram o resultado do servidor, ou seja, apenas modo de leitura – idempotentes – sempre o mesmo resultado – get ou post ou option – 
-Um métodos seguro podem causa
 
 Exemplo:
 1. Get:/somedir/page.html/HTTP/1.1 (Request Line) (Head Line)
@@ -60,6 +58,53 @@ Detalhando essas etapas:
 4. User-agent é o agente que está realizando a requisição, ou seja, a tecnologia aplicada por ela. Nela poderia um por curl, navegador ou aplicação Java.
 5.  Accept-language é o idioma de preferência do cliente.
 
+Principais métodos 
+- Get - Solicita um recurso do servidor
+- Head - Get sem corpo de resposta - apenas o cabecalho 
+- post - Submete uma entidade a um recurso - o servidor é obrigado a tratar aquele comando - definição de formato ou parâmetros para segurança 
+- Put - Substituição parcial dos recursos pelos dados da requisição
+- Delete - remoção de um recurso 
+- Trace - Chamada de loop-back a um determinado recurso;
+- Option - opções de comunicação com recurso - 
+- Connect - Tunelamento identificado pelo recurso
+- Patch - Modificação parcial - RFC 5789
+
+
+Métodos seguros – método que tando executado não alteram o resultado do servidor, ou seja, apenas modo de leitura – idempotentes – sempre o mesmo resultado – get ou post ou option – 
+Um métodos seguro podem causa
+
+
+## HTTP response
+- Versão do protocolo 
+- Status code
+- Status da mensagem
+
+#### Códigos 
+- 200 OK - request bem sucessida e objetivo enviado ao objetivo; - 
+- 301 moved permanently - Objeto realocado nova URL no campo Location - execucao de um url ela foi realocada 
+- 400 Bad request - reposta genérica - servidor não entendeu a mensagem 
+- 404 Not found - documento solicitado é inexistente
+- 505 http version not supported - versao do protocolo não suportada pelo servidor 
+
+
+#### Classificação dos códigos -RFC 2616
+- Information response (100-199)
+- Succesfull response (200-299)
+- Redirection response (300-399)
+- Client error response (400-499)
+- server error response (500-599)
+
+
+#### Web Distributed Authoring and Versioning
+- 102 - Processing 
+- 207 - Multi-status 
+- 208 - Already reported 
+- 422 - Unprocessable Entity
+- 423 - Locked
+- 422 - Failed Dependency
+
+
+>> WebDAv, CalDav, CardDAV
 
 
 
